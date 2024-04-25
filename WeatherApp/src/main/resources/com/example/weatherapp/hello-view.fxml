@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.weatherapp.HelloController">
+    <AnchorPane prefHeight="720.0" prefWidth="960.0">
+        <Button layoutX="762.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#onSubmitClick" prefHeight="38.0" prefWidth="102.0" text="Submit">
+             <font><Font size="18.0" /></font>
+        </Button>
+
+        <TextField fx:id="endDate" layoutX="488.0" layoutY="63.0" prefHeight="25.0" prefWidth="227.0" />
+        <TextField fx:id="startDate" layoutX="488.0" layoutY="28.0" prefHeight="25.0" prefWidth="227.0" />
+        <TextField fx:id="Location" layoutX="167.0" layoutY="63.0" prefHeight="25.0" prefWidth="195.0" />
+        <Label layoutX="167.0" layoutY="21.0" prefHeight="30.0" prefWidth="112.0" text="Location">
+         <font>
+            <Font size="18.0" />
+         </font>
+        </Label>
+        <Label layoutX="398.0" layoutY="23.0" text="Start Date">
+             <font>
+                <Font size="18.0" />
+             </font>
+        </Label>
+        <Label layoutX="399.0" layoutY="63.0" text="End  Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+        </Label>
+        <LineChart fx:id="tempChart" alternativeColumnFillVisible="true" horizontalZeroLineVisible="false" layoutX="38.0" layoutY="155.0" legendSide="RIGHT" prefHeight="240.0" prefWidth="400.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </LineChart>
+
+        <LineChart fx:id="precipChart" layoutX="38.0" layoutY="452.0" prefHeight="240.0" prefWidth="400.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </LineChart>
+
+        <LineChart fx:id="windChart" layoutX="511.0" layoutY="452.0" prefHeight="240.0" prefWidth="400.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </LineChart>
+
+        <LineChart fx:id="humidityChart" layoutX="515.0" layoutY="155.0" prefHeight="240.0" prefWidth="400.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </LineChart>
+      <Label layoutX="183.0" layoutY="115.0" text="Daily Temperature(°C)">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="664.0" layoutY="115.0" text="Daily Humidity(%)">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="174.0" layoutY="408.0" text="Daily Precipitation(mm)">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="664.0" layoutY="408.0" text="Daily Wind Speed(km/h)">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+    </AnchorPane>
+
+
+</AnchorPane>
